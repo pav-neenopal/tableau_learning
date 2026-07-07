@@ -4,15 +4,13 @@ on:
   push:
     branches:
       - main
-
-workflow_dispatch:
+  workflow_dispatch:
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
 
     steps:
-
       - name: Checkout Repository
         uses: actions/checkout@v4
 
@@ -32,8 +30,7 @@ jobs:
           TABLEAU_SITE: ${{ secrets.TABLEAU_SITE }}
           TABLEAU_PAT_NAME: ${{ secrets.TABLEAU_PAT_NAME }}
           TABLEAU_PAT_SECRET: ${{ secrets.TABLEAU_PAT_SECRET }}
-        run: |
-          python deploy.py
+        run: python deploy.py
 
       - name: Upload Permission Snapshots
         if: always()
