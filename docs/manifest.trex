@@ -19,7 +19,7 @@
     <min-api-version>1.0</min-api-version>
 
     <source-location>
-      <url>http://localhost:8000/index.html</url>
+      <url>https://pav-neenopal.github.io/tableau_learning/</url>
     </source-location>
 
   </dashboard-extension>
